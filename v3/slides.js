@@ -19,4 +19,6 @@ const SLIDES = [
   { file: "slides/17-new-feature-process.html", title: "New feature process" },
   { file: "slides/18-sdlc-unique.html", title: "What makes it unique" },
   { file: "slides/19-principles.html", title: "Principles" },
+  { file: "slides/20-security.html", title: "Security" },
+  { file: "slides/21-sdlc-pattern.html", title: "SDLC pattern in Bhati" },
 ];
