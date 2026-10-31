@@ -1,0 +1,36 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>New feature process</title>
+<link rel="stylesheet" href="../theme.css">
+<style>
+.chain{display:grid;grid-template-columns:repeat(5,1fr);gap:2.2cqw;align-items:stretch}
+.step{position:relative;background:var(--bg);border:.07cqw solid var(--line);border-radius:var(--radius);padding:1.1cqw 1.1cqw 1.2cqw}
+.step:not(:last-child)::after{content:"";position:absolute;left:100%;top:50%;width:2.2cqw;height:.2cqw;background:var(--accent)}
+.step:not(:last-child)::before{content:"";position:absolute;left:calc(100% + 1.45cqw);top:50%;margin-top:-.45cqw;border-left:.75cqw solid var(--accent);border-top:.55cqw solid transparent;border-bottom:.55cqw solid transparent;z-index:1}
+.step i{display:block;font-style:normal;font-weight:700;font-size:1.4cqw;color:var(--accent);margin-bottom:.35cqw}
+.step b{display:block;font-size:1.95cqw;line-height:1.15;margin-bottom:.55cqw}
+.step span{display:block;font-size:1.6cqw;line-height:1.28;color:var(--muted)}
+.step.last{background:var(--brand);border-color:var(--brand)}
+.step.last i,.step.last b,.step.last span{color:#fff}
+.checks{margin-top:1.8cqw}
+.cap{font-size:1.4cqw;font-weight:700;letter-spacing:.1cqw;color:var(--accent);text-transform:uppercase;margin:0 0 .7cqw}
+.checks ul{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(4,1fr);gap:1.5cqw}
+.checks li{font-size:1.7cqw;line-height:1.25;border-top:.07cqw solid var(--line);padding-top:.7cqw}
+.checks li::before{content:"✓ ";color:var(--accent);font-weight:700}
+</style></head><body>
+<section class="slide"><div class="canvas">
+  <header class="band"><div class="kicker">SDLC in Bhati</div><h1>How a new feature gets built</h1></header>
+  <div class="body">
+    <div class="chain">
+      <div class="step"><i>1</i><b>Requirements</b><span>We spend the most time here, until they are final</span></div>
+      <div class="step"><i>2</i><b>Design &amp; tasks</b><span>design.md and tasks.md are created</span></div>
+      <div class="step"><i>3</i><b>Implementation</b><span>Produces evidence for each task and an E2E test pack</span></div>
+      <div class="step"><i>4</i><b>Security skill</b><span>Run locally to prepare the code for the PEN test</span></div>
+      <div class="step last"><i>5</i><b>Code review</b><span>Checks that all of this was done</span></div>
+    </div>
+    <div class="checks">
+      <p class="cap">What code review looks for</p>
+      <ul><li>Final requirements</li><li>Design and tasks</li><li>Evidence and E2E pack</li><li>Security skill run</li></ul>
+    </div>
+  </div>
+  <div class="control"><small>Control</small><span>Review confirms we followed the process and didn't vibe code.</span></div>
+</div></section>
+</body></html>
