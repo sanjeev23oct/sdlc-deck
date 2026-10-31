@@ -16,4 +16,4 @@ See `README.txt` for detailed editing and TV presentation instructions.
 
 ## Skills session deck
 
-`skills/index.html` is a separate deck for the "Skills for coding agents" session: topics, repeated prompts, what skills are, and more skill candidates. It uses the same viewer and slide style. Its slides are in `skills/slides/`, and `skills/slides.js` sets their order.
+`skills/index.html` is a separate 19-slide deck for the "Skills for coding agents" session: why and what skills are, frontmatter, progressive disclosure, portability, organizing, overrides, selective install, the ecosystem, and the maker–checker delivery principles. It uses the same viewer and slide style. Its slides are in `skills/slides/`, and `skills/slides.js` sets their order.
