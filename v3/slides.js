@@ -15,4 +15,6 @@ const SLIDES = [
   { file: "slides/13-front-matter.html", title: "Front matter" },
   { file: "slides/14-loops.html", title: "Loops" },
   { file: "slides/15-software-factory.html", title: "Software factory" },
+  { file: "slides/16-sdlc-in-bhati.html", title: "SDLC in Bhati" },
+  { file: "slides/17-sdlc-unique.html", title: "What makes it unique" },
 ];
