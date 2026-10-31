@@ -1,0 +1,18 @@
+// Presentation order. To add a slide: create the file in slides/ and add a line here.
+const SLIDES = [
+  { file: "slides/01-contents.html", title: "Contents" },
+  { file: "slides/02-goal.html", title: "Goal" },
+  { file: "slides/03-approaches.html", title: "AI development approaches" },
+  { file: "slides/04-vibe-coding.html", title: "Vibe coding" },
+  { file: "slides/05-spec-driven.html", title: "Spec-driven" },
+  { file: "slides/06-skills-agents.html", title: "Skills and agents" },
+  { file: "slides/07-what-are-skills.html", title: "What is a skill?" },
+  { file: "slides/08-prompts-problem.html", title: "The problem" },
+  { file: "slides/09-skill-control.html", title: "Skills give control" },
+  { file: "slides/10-spec-example.html", title: "Spec example" },
+  { file: "slides/11-skill-examples.html", title: "Skill examples" },
+  { file: "slides/12-invoking-skills.html", title: "How is a skill invoked?" },
+  { file: "slides/13-front-matter.html", title: "Front matter" },
+  { file: "slides/14-loops.html", title: "Loops" },
+  { file: "slides/15-software-factory.html", title: "Software factory" },
+];

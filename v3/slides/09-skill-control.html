@@ -1,0 +1,30 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Skills give control</title>
+<link rel="stylesheet" href="../theme.css">
+<style>
+.two{display:grid;grid-template-columns:1fr 34cqw;gap:3.5cqw;align-items:start}
+.rows>div{grid-template-columns:16cqw 1fr;padding:1.05cqw 0}.rows b{font-size:1.95cqw}.rows span{font-size:1.8cqw}
+.cap{font-size:1.4cqw;font-weight:700;letter-spacing:.1cqw;color:var(--accent);text-transform:uppercase;margin:0 0 .7cqw}
+.code{font-size:1.4cqw;line-height:1.55}
+</style></head><body>
+<section class="slide"><div class="canvas">
+  <header class="band"><div class="kicker">Why skills</div><h1>With a skill, we control the output</h1></header>
+  <p class="lead">Example: the <code style="font-family:'Roboto Mono',monospace;font-size:.9em">/spec</code> skill decides where a spec goes and what it must contain.</p>
+  <div class="body"><div class="two">
+    <div class="rows">
+      <div><b>Folder</b><span>Always under <code>.kiro/specs/&lt;feature&gt;/</code></span></div>
+      <div><b>Files</b><span>requirements.md, design.md and tasks.md</span></div>
+      <div><b>Stories</b><span>As a / I want / So that</span></div>
+      <div><b>ACs</b><span>Numbered and testable</span></div>
+      <div><b>Edge cases</b><span>Spelled out, not left to the agent</span></div>
+      <div><b>Open questions</b><span>Listed for a person to answer</span></div>
+    </div>
+    <div><p class="cap">Real folder in our repo</p><pre class="code">.kiro/specs/satsang-cards/
+  12-bulk-visit-approval/
+    <span class="k">requirements.md</span>
+    <span class="k">design.md</span>
+    <span class="k">tasks.md</span>
+    loop/
+    evidence/</pre></div>
+  </div></div>
+</div></section>
+</body></html>

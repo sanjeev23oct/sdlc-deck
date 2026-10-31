@@ -1,0 +1,36 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;500&family=Roboto:wght@300;400;500;700&display=swap');
+/* AI SDLC in Bhati, v3 theme. All sizes use cqw so slides scale to any 16:9 TV. */
+*{box-sizing:border-box}
+:root{--bg:#ffffff;--brand:hsl(232,90%,61%);--brand-top:#93254f;--panel:#f4f4f6;--ink:#1f2937;--muted:#4b5563;--line:#e0e0e0;--radius:.55cqw;--accent:hsl(232,90%,61%)}
+html,body{height:100%}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:Roboto,Arial,Helvetica,sans-serif;overflow:hidden;display:flex;align-items:center;justify-content:center}
+.slide{width:min(100vw,calc(100dvh*16/9));aspect-ratio:16/9;container-type:inline-size;position:relative;overflow:hidden;background:var(--bg)}
+.canvas{position:absolute;inset:0;padding:3cqw 4.4cqw 4.6cqw;display:flex;flex-direction:column}
+.kicker{font-size:1.4cqw;font-weight:700;letter-spacing:.14cqw;color:var(--accent);text-transform:uppercase}
+h1{font-size:3.6cqw;line-height:1.15;font-weight:700;margin:.6cqw 0 0}
+em{font-style:normal;color:inherit}
+.foot{position:absolute;left:4.4cqw;right:4.4cqw;bottom:1.5cqw;font-size:1.2cqw;color:var(--muted)}
+.lead{font-size:2.3cqw;line-height:1.3;color:var(--muted);margin:1cqw 0 0}
+.body{flex:1;display:flex;flex-direction:column;justify-content:center;min-height:0}
+.flow{display:grid;grid-auto-flow:column;grid-auto-columns:1fr;gap:1cqw}
+.flow>div{background:var(--bg);border:.07cqw solid var(--line);border-radius:var(--radius);padding:1.3cqw 1.2cqw}
+.flow b{display:block;font-size:2.15cqw;line-height:1.15;margin-bottom:.7cqw}
+.flow span{display:block;font-size:1.8cqw;line-height:1.28;color:var(--muted)}
+.rows>div{display:grid;grid-template-columns:19cqw 1fr;gap:1.5cqw;align-items:baseline;padding:1.2cqw 0;border-top:.07cqw solid var(--line)}
+.rows b{font-size:2.3cqw}
+.rows span{font-size:2.1cqw;line-height:1.28;color:var(--muted)}
+.rows code{font-family:'Roboto Mono',Menlo,Consolas,monospace;font-size:.78em;color:var(--ink)}
+.control{display:flex;gap:1.5cqw;align-items:baseline;padding:1.2cqw 1.8cqw;background:var(--panel);border-radius:var(--radius);font-size:2.2cqw;line-height:1.25}
+.control small{font-size:1.4cqw;font-weight:700;letter-spacing:.14cqw;color:var(--accent);text-transform:uppercase;white-space:nowrap}
+.note{font-size:1.6cqw;line-height:1.3;color:var(--muted);margin:1cqw 0 0}
+.flow+.lead{margin-top:1.8cqw}
+.band{background:var(--brand);color:#fff;margin:-3cqw -4.4cqw 0;padding:2.6cqw 4.4cqw 2.6cqw}
+.band .kicker{color:#e3e7ff}
+.slide::before{content:"";position:absolute;top:0;left:0;right:0;height:.3cqw;background:var(--brand-top);z-index:1}
+.code{font-family:'Roboto Mono',Menlo,Consolas,monospace;font-size:1.55cqw;line-height:1.5;background:var(--panel);border:.07cqw solid var(--line);border-radius:var(--radius);padding:1.3cqw 1.6cqw;margin:0;white-space:pre-wrap}
+.code .k{color:var(--accent);font-weight:500}
+table.t{width:100%;border-collapse:collapse}
+table.t th{text-align:left;font-size:1.4cqw;letter-spacing:.1cqw;color:var(--accent);text-transform:uppercase;padding:0 1.5cqw .7cqw 0}
+table.t td{vertical-align:baseline;font-size:1.95cqw;line-height:1.3;color:var(--muted);padding:1.15cqw 1.5cqw 1.15cqw 0;border-top:.07cqw solid var(--line)}
+table.t td:first-child{color:var(--ink);font-weight:500}
+table.t code{font-family:'Roboto Mono',Menlo,Consolas,monospace;font-size:.92em;color:var(--ink);font-weight:500}

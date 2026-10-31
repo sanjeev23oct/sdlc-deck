@@ -1,0 +1,24 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Front matter</title>
+<link rel="stylesheet" href="../theme.css">
+<style>.code{font-size:1.45cqw;line-height:1.42;padding:1cqw 1.5cqw}.rows>div{padding:.8cqw 0}</style>
+</head><body>
+<section class="slide"><div class="canvas">
+  <header class="band"><div class="kicker">Skills</div><h1>Inside a skill: front matter and body</h1></header>
+  <div class="body" style="padding-top:1.6cqw;justify-content:flex-start"><pre class="code"><span class="k">---
+name:</span> build-api-controller
+<span class="k">description:</span> Build ONE backend controller (thin, [ApiController]/[Authorize], ...)
+  for a feature entity, then stop for dev review. Use when a task line calls for a controller.
+<span class="k">---</span>
+
+<span class="k"># build-api-controller</span>
+<b>STOP. Build only the controller for the current task, then stop.</b>
+1. Read in full: dev-system/standards/backend.md, dev-system/playbooks/api/controller.md
+2. Build only the controller for this entity: thin, no business logic.
+3. Do not build the next task.
+4. dotnet build, then stop and report.</pre>
+  <div class="rows" style="margin-top:1cqw">
+    <div><b>Front matter</b><span>Between the <code>---</code> lines. The agent reads this to decide when to use the skill.</span></div>
+    <div><b>Body</b><span>The instructions, loaded only when the skill runs.</span></div>
+  </div></div>
+</div></section>
+</body></html>

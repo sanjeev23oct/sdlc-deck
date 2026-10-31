@@ -1,0 +1,32 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Spec example</title>
+<link rel="stylesheet" href="../theme.css">
+<style>
+.ex{display:grid;grid-template-columns:1fr 1fr;gap:1.2cqw 3cqw}
+.ex>div{border-top:.07cqw solid var(--line);padding:1.1cqw 0 .8cqw}
+.cap{font-size:1.4cqw;font-weight:700;letter-spacing:.1cqw;color:var(--accent);text-transform:uppercase;margin:0 0 .5cqw}
+.ex ul{margin:0;padding-left:1.5cqw}
+.ex li{font-size:1.95cqw;line-height:1.3;color:var(--ink);margin-bottom:.45cqw}
+.src{font-family:'Roboto Mono',Menlo,monospace;font-size:1.3cqw;color:var(--muted);margin:1.4cqw 0 1cqw}
+.body{justify-content:flex-start}
+</style></head><body>
+<section class="slide"><div class="canvas">
+  <header class="band"><div class="kicker">Example: Satsang Cards</div><h1>What the spec actually says</h1></header>
+  <p class="src">.kiro/specs/satsang-cards/12-bulk-visit-approval/requirements.md</p>
+  <div class="body"><div class="ex">
+    <div><p class="cap">Acceptance criteria</p><ul>
+      <li>"The page SHALL be protected: unauthenticated users are redirected to login."</li>
+      <li>"The endpoint SHALL create each enrollment with card_status_id = APPROVED."</li>
+    </ul></div>
+    <div><p class="cap">Edge cases</p><ul>
+      <li>"If the card number is not found the page SHALL show an inline error: Card not found."</li>
+      <li>"If no previous (CLOSED) visit exists ... return an empty list (not an error)."</li>
+    </ul></div>
+    <div><p class="cap">Correctness properties</p><ul>
+      <li>"No duplicates: the same (satsang_visit_id, satsang_card_id) pair is never inserted twice."</li>
+    </ul></div>
+    <div><p class="cap">Open questions</p><ul>
+      <li>"Should blocked cards be silently skipped server-side or surfaced as per-card errors?"</li>
+    </ul></div>
+  </div></div>
+</div></section>
+</body></html>
