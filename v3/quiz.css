@@ -1,0 +1,17 @@
+/* Quiz slides. Uses theme.css colours only: accent = correct, brand-top = wrong. */
+.band h1.q{font-size:3cqw}
+.situation{font-size:2.1cqw;line-height:1.35;color:var(--ink);margin:2cqw 0 0;max-width:80cqw}
+.opts{display:grid;grid-template-columns:1fr 1fr;gap:1.2cqw}
+.opt{display:grid;grid-template-columns:3.4cqw 1fr;align-items:center;gap:1cqw;text-align:left;font:inherit;font-size:1.9cqw;line-height:1.28;color:var(--ink);background:var(--bg);border:.14cqw solid var(--line);border-radius:var(--radius);padding:1.2cqw 1.4cqw;cursor:pointer}
+.opt i{font-style:normal;font-weight:700;font-size:1.7cqw;color:var(--accent);width:3.2cqw;height:3.2cqw;border-radius:50%;background:var(--panel);display:flex;align-items:center;justify-content:center}
+.opt:hover:not(:disabled){border-color:var(--accent)}
+.opt:focus-visible{outline:.2cqw solid var(--accent);outline-offset:.2cqw}
+.opt:disabled{cursor:default}
+.opt.right{border-color:var(--accent);background:var(--panel)}
+.opt.right i{background:var(--accent);color:#fff}
+.opt.wrong{border-color:var(--brand-top)}
+.opt.wrong i{background:var(--brand-top);color:#fff}
+.opt.dim{opacity:.45}
+.why{visibility:hidden}
+.why.show{visibility:visible}
+.hint{font-size:1.4cqw;color:var(--muted);margin:1cqw 0 0}

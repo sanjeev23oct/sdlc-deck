@@ -1,0 +1,20 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Data analysis</title>
+<link rel="stylesheet" href="../theme.css">
+<style>
+.rows>div{grid-template-columns:22cqw 1fr;padding:1.05cqw 0}
+.rows b{font-size:2.05cqw}.rows span{font-size:1.85cqw}
+</style></head><body>
+<section class="slide"><div class="canvas">
+  <header class="band"><div class="kicker">Do's and don'ts: data analysis</div><h1>Bring the agent to the query, not the data to the agent</h1></header>
+  <p class="lead">When a task needs data, the agent should write the analysis. Real rows stay with you.</p>
+  <div class="body"><div class="rows">
+    <div><b>Share the schema</b><span>Give table and column names and types, not rows.</span></div>
+    <div><b>Let it write the query</b><span>The agent writes the SQL or script. You run it on your side.</span></div>
+    <div><b>Share aggregates</b><span>Counts, totals and averages are fine. Row-level records are not.</span></div>
+    <div><b>Mask before you share</b><span>Replace names, phones, IDs and IPs with fake values first.</span></div>
+    <div><b>Use synthetic samples</b><span>Generate a few made-up rows with the same shape as the real data.</span></div>
+    <div><b>Never connect to prod</b><span>No agent access to production databases, servers or backups.</span></div>
+  </div></div>
+  <div class="control"><small>Rule of thumb</small><span>If you would not post it in a public channel, don't paste it into an agent.</span></div>
+</div></section>
+</body></html>

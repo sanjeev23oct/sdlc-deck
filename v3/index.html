@@ -11,14 +11,22 @@ nav.on{opacity:1}button,select{font:inherit;color:#fff;background:#31475a;border
 <script>
 const frame=document.getElementById('frame'),nav=document.getElementById('nav'),jump=document.getElementById('jump');let i=0,timer;
 SLIDES.forEach((s,n)=>jump.add(new Option((n+1)+'. '+s.title,n)));
-function show(n){i=Math.max(0,Math.min(SLIDES.length-1,n));frame.src=SLIDES[i].file;document.title=SLIDES[i].title;document.getElementById('count').textContent=(i+1)+' / '+SLIDES.length;jump.value=i;location.hash=i+1}
+function show(n){i=Math.max(0,Math.min(SLIDES.length-1,n));frame.style.pointerEvents=SLIDES[i].quiz?'auto':'none';frame.src=SLIDES[i].file;document.title=SLIDES[i].title;document.getElementById('count').textContent=(i+1)+' / '+SLIDES.length;jump.value=i;location.hash=i+1}
 function full(){document.fullscreenElement?document.exitFullscreen():document.documentElement.requestFullscreen?.()}
 function wake(){nav.classList.add('on');clearTimeout(timer);timer=setTimeout(()=>{if(nav.matches(':hover')||document.activeElement===jump)wake();else nav.classList.remove('on')},2500)}
-function key(e){if(e.target===jump)return;if(['ArrowRight','PageDown',' '].includes(e.key)){e.preventDefault();show(i+1)}if(['ArrowLeft','PageUp'].includes(e.key)){e.preventDefault();show(i-1)}if(e.key==='Home')show(0);if(e.key==='End')show(SLIDES.length-1);if(e.key==='f'||e.key==='F')full()}
+function key(e){if(e.target===jump)return;if(SLIDES[i].quiz&&/^[1-4a-dA-D]$/.test(e.key)){frame.contentWindow.postMessage({quiz:true,type:'pick',key:e.key},'*');return}if(['ArrowRight','PageDown',' '].includes(e.key)){e.preventDefault();show(i+1)}if(['ArrowLeft','PageUp'].includes(e.key)){e.preventDefault();show(i-1)}if(e.key==='Home')show(0);if(e.key==='End')show(SLIDES.length-1);if(e.key==='f'||e.key==='F')full()}
 document.addEventListener('keydown',key);document.addEventListener('mousemove',wake);
 // The iframe ignores the pointer, so keys and mouse movement always reach this page, even on file://.
 jump.onchange=()=>{show(+jump.value);jump.blur()};
 window.addEventListener('hashchange',()=>{const n=parseInt(location.hash.slice(1))-1;if(n>=0&&n!==i)show(n)});
 document.getElementById('prev').onclick=()=>show(i-1);document.getElementById('next').onclick=()=>show(i+1);document.getElementById('full').onclick=full;
+// Quiz: slides post their answers here, so the score survives moving between slides.
+const answers={},quizTotal=SLIDES.filter(s=>s.quiz).length;
+window.addEventListener('message',e=>{if(e.source!==frame.contentWindow)return;const d=e.data||{};if(!d.quiz)return;const reply=m=>frame.contentWindow.postMessage(Object.assign({quiz:true},m),'*');
+if(d.type==='key')key({key:d.key,target:null,preventDefault(){}});
+if(d.type==='wake')wake();
+if(d.type==='answer'&&!(d.id in answers))answers[d.id]={pick:d.pick,correct:d.correct};
+if(d.type==='hello'&&answers[d.id])reply({type:'state',id:d.id,pick:answers[d.id].pick});
+if(d.type==='score?'){const v=Object.values(answers);reply({type:'score',right:v.filter(a=>a.correct).length,answered:v.length,total:quizTotal})}});
 show((parseInt(location.hash.slice(1))||1)-1);wake();
 </script></body></html>

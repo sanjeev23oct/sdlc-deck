@@ -21,4 +21,16 @@ const SLIDES = [
   { file: "slides/19-principles.html", title: "Principles" },
   { file: "slides/20-security.html", title: "Security" },
   { file: "slides/21-sdlc-pattern.html", title: "SDLC pattern in Bhati" },
+  { file: "slides/22-dos-and-donts.html", title: "Do's and don'ts" },
+  { file: "slides/23-data-analysis.html", title: "Data analysis" },
+  { file: "slides/24-tools-and-skills.html", title: "Tools and skills" },
+  { file: "slides/25-adopt-ai-assets.html", title: "Adopting ai-assets" },
+  // Quiz slides take clicks (quiz: true). index.html keeps the score.
+  { file: "slides/26-quiz-personal-data.html", title: "Quiz 1: personal data", quiz: true },
+  { file: "slides/27-quiz-data-analysis.html", title: "Quiz 2: data analysis", quiz: true },
+  { file: "slides/28-quiz-skills.html", title: "Quiz 3: skills", quiz: true },
+  { file: "slides/29-quiz-vibe-coding.html", title: "Quiz 4: vibe coding", quiz: true },
+  { file: "slides/30-quiz-tools.html", title: "Quiz 5: tools", quiz: true },
+  { file: "slides/31-quiz-secrets.html", title: "Quiz 6: secrets", quiz: true },
+  { file: "slides/32-quiz-result.html", title: "Quiz result" },
 ];

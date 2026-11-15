@@ -1,0 +1,37 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Adopting ai-assets</title>
+<link rel="stylesheet" href="../theme.css">
+<style>
+.two{display:grid;grid-template-columns:1fr 1fr;gap:3.5cqw}
+.two h2{font-size:2.2cqw;line-height:1.2;margin:0 0 .3cqw}
+.two .sub{font-size:1.6cqw;color:var(--muted);margin:0 0 .6cqw}
+.two ol{list-style:none;margin:0;padding:0;counter-reset:s}
+.two li{display:grid;grid-template-columns:2.6cqw 1fr;align-items:baseline;padding:.95cqw 0;border-top:.07cqw solid var(--line);counter-increment:s}
+.two li::before{content:counter(s);font-weight:700;font-size:1.8cqw;color:var(--accent)}
+.two li b{font-size:1.9cqw;line-height:1.22}
+.two li span{display:block;font-size:1.6cqw;line-height:1.28;color:var(--muted);font-weight:400;margin-top:.2cqw}
+</style></head><body>
+<section class="slide"><div class="canvas">
+  <header class="band"><div class="kicker">Do's and don'ts: getting started</div><h1>Every team starts from the ai-assets library</h1></header>
+  <div class="body"><div class="two">
+    <div>
+      <h2>New project</h2>
+      <p class="sub">Start with the guardrails in place.</p>
+      <ol>
+        <li><b>Copy the starter kit<span>Take it from the ai&#8209;assets project into your repo.</span></b></li>
+        <li><b>Follow the setup instructions<span>They are in the ai&#8209;assets project and cover skills, agents and settings.</span></b></li>
+        <li><b>Work through the skills<span>The skills set how each task is specified, built and checked.</span></b></li>
+      </ol>
+    </div>
+    <div>
+      <h2>Legacy project</h2>
+      <p class="sub">Add skills step by step, without a rewrite.</p>
+      <ol>
+        <li><b>Clean up first<span>Move secrets and IPs out of the repo and config into a vault.</span></b></li>
+        <li><b>Copy the starter kit<span>Take it from the ai&#8209;assets project into your repo.</span></b></li>
+        <li><b>Follow the setup instructions<span>Use the steps for existing projects in ai&#8209;assets.</span></b></li>
+        <li><b>Apply skills to new changes<span>Existing code stays as it is until a change touches it.</span></b></li>
+      </ol>
+    </div>
+  </div></div>
+</div></section>
+</body></html>
