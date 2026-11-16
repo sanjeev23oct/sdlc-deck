@@ -1,0 +1,20 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Quiz 8</title>
+<link rel="stylesheet" href="../theme.css">
+<link rel="stylesheet" href="../quiz.css">
+</head><body>
+<section class="slide"><div class="canvas">
+  <header class="band"><div class="kicker">Quiz · 8 of 13 · Hardcoded secrets</div><h1 class="q">Do you accept the change?</h1></header>
+  <p class="situation">The agent writes the data layer and puts the full connection string, password included, in config.py “for now”.</p>
+  <div class="body">
+    <div class="opts" data-quiz="hardcoded">
+      <button type="button" class="opt" data-correct><i>A</i><span>No. Ask it to read the connection string from an environment variable or the vault</span></button>
+      <button type="button" class="opt"><i>B</i><span>Accept it and fix it before release</span></button>
+      <button type="button" class="opt"><i>C</i><span>Accept it, but move the string into a comment</span></button>
+      <button type="button" class="opt"><i>D</i><span>Accept it if the password is Base64-encoded</span></button>
+    </div>
+    <p class="hint">Click an answer, or press 1 to 4.</p>
+  </div>
+  <div class="control why"><small>Answer</small><span>“For now” gets committed. Code reads secrets at runtime; the repo holds only the variable name.</span></div>
+</div></section>
+<script src="../quiz.js"></script>
+</body></html>

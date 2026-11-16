@@ -32,5 +32,12 @@ const SLIDES = [
   { file: "slides/29-quiz-vibe-coding.html", title: "Quiz 4: vibe coding", quiz: true },
   { file: "slides/30-quiz-tools.html", title: "Quiz 5: tools", quiz: true },
   { file: "slides/31-quiz-secrets.html", title: "Quiz 6: secrets", quiz: true },
-  { file: "slides/32-quiz-result.html", title: "Quiz result" },
+  { file: "slides/32-quiz-env-committed.html", title: "Quiz 7: env files", quiz: true },
+  { file: "slides/33-quiz-hardcoded.html", title: "Quiz 8: hardcoded secrets", quiz: true },
+  { file: "slides/34-quiz-connection-string.html", title: "Quiz 9: connection strings", quiz: true },
+  { file: "slides/35-quiz-db-mcp.html", title: "Quiz 10: database MCP", quiz: true },
+  { file: "slides/36-quiz-approvals.html", title: "Quiz 11: approval prompts", quiz: true },
+  { file: "slides/37-quiz-allow-deny.html", title: "Quiz 12: allow and deny", quiz: true },
+  { file: "slides/38-quiz-auto-mode.html", title: "Quiz 13: auto mode", quiz: true },
+  { file: "slides/39-quiz-result.html", title: "Quiz result" },
 ];

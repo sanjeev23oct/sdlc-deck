@@ -1,0 +1,20 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Quiz 10</title>
+<link rel="stylesheet" href="../theme.css">
+<link rel="stylesheet" href="../quiz.css">
+</head><body>
+<section class="slide"><div class="canvas">
+  <header class="band"><div class="kicker">Quiz · 10 of 13 · Database MCP</div><h1 class="q">Is this allowed?</h1></header>
+  <p class="situation">A teammate wants to add a database MCP server so the agent can query the production database directly.</p>
+  <div class="body">
+    <div class="opts" data-quiz="db-mcp">
+      <button type="button" class="opt"><i>A</i><span>Yes, if the agent only runs SELECT queries</span></button>
+      <button type="button" class="opt"><i>B</i><span>Yes, if the credentials are in the MCP config file</span></button>
+      <button type="button" class="opt"><i>C</i><span>Yes, outside office hours</span></button>
+      <button type="button" class="opt" data-correct><i>D</i><span>No. Only an approved MCP server, on a dev database with masked data and read-only access</span></button>
+    </div>
+    <p class="hint">Click an answer, or press 1 to 4.</p>
+  </div>
+  <div class="control why"><small>Answer</small><span>An MCP server gives the agent live access. Production data stays out, and new MCP servers go through InfoSec review like skills.</span></div>
+</div></section>
+<script src="../quiz.js"></script>
+</body></html>

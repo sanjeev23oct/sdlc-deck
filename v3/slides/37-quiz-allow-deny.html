@@ -1,0 +1,20 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Quiz 12</title>
+<link rel="stylesheet" href="../theme.css">
+<link rel="stylesheet" href="../quiz.css">
+</head><body>
+<section class="slide"><div class="canvas">
+  <header class="band"><div class="kicker">Quiz · 12 of 13 · Allow and deny</div><h1 class="q">Which setup is right?</h1></header>
+  <p class="situation">Your team is setting up Claude Code permissions for the repository.</p>
+  <div class="body">
+    <div class="opts" data-quiz="allow-deny">
+      <button type="button" class="opt" data-correct><i>A</i><span>Allow tests, lint and build. Deny reading .env and secrets, git push and network commands</span></button>
+      <button type="button" class="opt"><i>B</i><span>Allow everything. Reviewers will catch problems</span></button>
+      <button type="button" class="opt"><i>C</i><span>Deny everything and approve each command by hand</span></button>
+      <button type="button" class="opt"><i>D</i><span>Let each developer decide on their own machine</span></button>
+    </div>
+    <p class="hint">Click an answer, or press 1 to 4.</p>
+  </div>
+  <div class="control why"><small>Answer</small><span>Allow the routine commands, deny the dangerous ones, and commit the rules in the project settings so everyone gets the same.</span></div>
+</div></section>
+<script src="../quiz.js"></script>
+</body></html>

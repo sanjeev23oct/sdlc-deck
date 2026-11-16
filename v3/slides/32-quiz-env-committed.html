@@ -1,0 +1,20 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Quiz 7</title>
+<link rel="stylesheet" href="../theme.css">
+<link rel="stylesheet" href="../quiz.css">
+</head><body>
+<section class="slide"><div class="canvas">
+  <header class="band"><div class="kicker">Quiz · 7 of 13 · Env files</div><h1 class="q">What do you do?</h1></header>
+  <p class="situation">A .env file with the staging database password was committed and pushed three weeks ago.</p>
+  <div class="body">
+    <div class="opts" data-quiz="env-committed">
+      <button type="button" class="opt"><i>A</i><span>Delete the file in a new commit. That is enough</span></button>
+      <button type="button" class="opt"><i>B</i><span>Make the repository private</span></button>
+      <button type="button" class="opt"><i>C</i><span>Leave it. Staging is not production</span></button>
+      <button type="button" class="opt" data-correct><i>D</i><span>Rotate the password, purge it from history, add .env to .gitignore</span></button>
+    </div>
+    <p class="hint">Click an answer, or press 1 to 4.</p>
+  </div>
+  <div class="control why"><small>Answer</small><span>Once pushed, a secret is exposed. Rotate it first: deleting the file still leaves it in the history.</span></div>
+</div></section>
+<script src="../quiz.js"></script>
+</body></html>
